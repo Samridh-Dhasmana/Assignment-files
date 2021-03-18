@@ -1,0 +1,45 @@
+<html>
+    <head>
+       <title>HTML form</title> 
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <h1>Please Enter Your Details</h1>
+            <h4>Fill the application form below and submit.</h4>
+            <form>
+                <table>
+                <tr><td class="e">Name*</td>
+                <td><input type="text"  placeholder="First Name" required>
+                <input type="text" id="name" placeholder="Last Name" required> </tr>
+               <tr><td class="e"> E-mail Address* </td><td><input type="email" class="c" placeholder="Mail@example.com" required></td></tr>
+               <tr><td class="e"> Phone Number*</td><td><input type="text" class="c" placeholder="Phone Number" required></td></tr>
+               <tr><td class="e">Gender*</td><td><select class="c">
+                   <option>Gender</option>
+                   <option>Male</option>
+                   <option>Female</option>
+               </select></td></tr>
+               <tr><td class="e"> Citizen*</td><td ><select class="c" >
+                    <option>Select Country</option>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>Mexico</option>
+                    <option>Japan</option>
+                </select></td></tr>
+               <tr><td class="e"> Date of Birth*</td>
+                <td><input type="number" id="w" placeholder="Day" min="1" max="30">
+                <input type="number" id="w"placeholder="Month" min="1" max="12">
+                <input type="number" id="w" placeholder="Year" min="1950" max="2021"></td></tr>
+                <tr><td class="e">Address*</td> 
+                <td><input type="text"  placeholder="Street Address" required>
+                <input type="text"  placeholder="Street Line 2" required></td></tr>
+                <tr></tr><td></td><td><input type="text" placeholder="Landmark" required>
+                <input type="text" placeholder="City" required></td></tr>
+                <tr><td></td><td><input type="text" placeholder="State/Province" required>
+                <input type="text" placeholder="Postal/zip code" required></td></tr>
+                <tr><td></td><td><input type="submit" id="s" value="SUBMIT"></td></tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
