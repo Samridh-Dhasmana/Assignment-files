@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>JAVASCRIPT DIV</title>
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            background-color: blueviolet;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" onclick="changecolor()"></div>
+    <script>
+           var digits="0123456789ABCDEF"; 
+           function randomColorGenrerate(){
+                low=0;
+                high=15;
+                color='#';
+                for(i=0;i<6;i++){
+                color=color+digits[low+Math.floor(Math.random()*(high+1-low))];
+                }
+                return color;
+            }
+        function changecolor(){
+            ele=document.getElementById('div1');
+            color = randomColorGenrerate();
+           ele.style.backgroundColor=color;
+            }
+             
+    </script>
+</body>
+</html>
