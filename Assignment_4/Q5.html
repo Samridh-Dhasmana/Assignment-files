@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Random</title>
+        <style>
+            #div1{
+                width: 150px;
+                height: 150px;
+                border: 1px solid black;
+                background-color: blueviolet;
+                border-radius: 0%;
+                position:absolute;
+            }
+            #div2{
+                text-align: center;
+                display: block;
+            }
+        </style>
+    </head>
+    <body onload="random()">
+        <div id="div2"></div>
+        <div id="div1" onclick="set()"></div>
+            <script>
+                var digits="0123456789ABCDEF"; 
+                var w = window.innerWidth;
+                var h = window.innerHeight;
+                function randomColorGenrerate()
+                {
+                    low=0;
+                    high=15;
+                    color='#';
+                    for(i=0;i<6;i++){
+                    color=color+digits[low+Math.floor(Math.random()*(high+1-low))];
+                    }
+                    return color;
+                }
+                function randomshape()
+                {
+                    var num=Math.floor(Math.random()*100);
+                    return num;
+                }
+                function random(){
+                    ele=document.getElementById("div1");
+                    ele.style.backgroundColor=randomColorGenrerate();
+                    ele.style.borderRadius =randomshape()+"%";
+                    ele.style.top =Math.floor(Math.random() * (h-150)) + 'px';
+                    ele.style.left =Math.floor(Math.random() * (w-150)) + 'px';
+                }
+                function set(){
+                    time= 700 + Math.floor(Math.random() * (1200 - 700 +1));
+                    setTimeout(function(){random()},time);
+                    document.getElementById("div2").innerHTML="<h3>"+time+"ms"+"</h3>";
+                }
+            </script>
+    </body>
+</html>
