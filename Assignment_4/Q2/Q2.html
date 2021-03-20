@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <style>
+            div{
+                text-align: center;
+            }
+            #h{
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                color: red;
+                font-size: 20px;
+            }
+            h1{
+                color: navy;
+            }
+            #b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8,#b9{
+                width: 80px;
+                height: 52px; 
+                font-size: 30px; 
+                background-color: aqua;
+                text-align: center;
+                
+            }
+            #reset{
+                width: 95px; 
+                height: 40px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background-color:blue;
+                color: white;
+            }
+            #print{
+                color: green;
+                font-size: 30px;
+            }
+        </style>
+        <script src="tictactoe.js"></script> 
+    </head>
+    <body>
+        <div>
+            <h1 >TIC TAC TOE</h1>
+        <p id="h">Start game by clicking on box<br>
+            First Player starts as Player X<br>
+            Second  Player as Player 0 
+        </p> 
+        <input type="text" id="b1" onclick="tick1(); checkforwin()" readonly>
+        <input type="text" id="b2" onclick="tick2(); checkforwin()" readonly>
+        <input type="text" id="b3" onclick="tick3(); checkforwin()" readonly><br><br>
+        <input type="text" id="b4" onclick="tick4(); checkforwin()" readonly>
+        <input type="text" id="b5" onclick="tick5(); checkforwin()" readonly>
+        <input type="text" id="b6" onclick="tick6(); checkforwin()" readonly><br><br>
+        <input type="text" id="b7" onclick="tick7(); checkforwin()" readonly>
+        <input type="text" id="b8" onclick="tick8(); checkforwin()" readonly>
+        <input type="text" id="b9" onclick="tick9(); checkforwin()" readonly><br><br>
+        <button id="reset" onclick="resetGrid()"> Reset</button>
+        <br><br> 
+        <!-- Space to show player turn -->
+        <p id="print"></p> 
+        </div>
+    </body>
+</html>

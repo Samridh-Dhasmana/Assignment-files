@@ -1,0 +1,8 @@
+function extractlink(){
+    l=document.links;
+    var a= [];
+    for(var i=0;i<l.length;i++){
+    a.push(l[i].href);
+    }
+    return a;
+  }
