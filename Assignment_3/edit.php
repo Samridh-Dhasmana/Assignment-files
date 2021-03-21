@@ -24,7 +24,7 @@ if(isset($_POST['submit']))
     if(mysqli_query($conn,$sql))
     {
         echo "Data updated succesfully";
-        header("Location:Q5.php");
+        header("Location:Q4.php");
     }
     else
     {
