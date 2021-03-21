@@ -43,8 +43,8 @@ if(isset($_POST['submit']))
             Email-id  <input type="email" name="email" value=<?php echo "$email"?> placeholder="Type Email-id" required/>
             <br>
             Gender-
-            <input type="radio" name="gender" value="Male">Male 
-            <input type="radio" name="gender" value="Female">Female 
+            <input type="radio" name="gender" value="Male" <?php if($gender=="Male") {echo "checked";}?> >Male 
+            <input type="radio" name="gender" value="Female" <?php if($gender=="Female") {echo "checked";}?> >Female 
             <br>
             Select City  <select name="city" > 
             <option value="DehraDun" <?php if($city=="DehraDun"){ echo "selected";}?>>DehraDun</option>
